@@ -24,10 +24,7 @@ object App extends App {
   val a = Data.createNMillionRowsTable(spark, 5, 10).createOrReplaceTempView("a")
   val b = Data.createNMillionRowsTable(spark, 2, 10).createOrReplaceTempView("b")
 
-  spark.read.parquet("hdfs://localhost:9000/user/gsvictor/data100M36P.parquet").createOrReplaceTempView("a")
-  spark.read.parquet("hdfs://localhost:9000/user/gsvictor/data500M20P.parquet").createOrReplaceTempView("b")
-
-  val df = spark.sql("select * from a, b where a.id = b.id and b.id < 10000000")
+  val df = spark.sql("select * from a, b where a.id = b.id and b.id < 100000")
 
   val analyzer = new CostAnalyzer(computeIntermediateResults = true)
   analyzer.analyze(df)
