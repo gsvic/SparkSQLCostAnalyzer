@@ -1,11 +1,11 @@
 package com.gsvic.spark.cost.metrics
 
-import java.io.FileInputStream
 import java.util.Properties
 
 class CostMetrics {
   val props = new Properties
-  val confFileStream = new FileInputStream("conf/cost.properties")
+  val confFileStream = getClass.getClassLoader.getResourceAsStream("cost.properties")
+
   props.load(confFileStream)
 
   final val DISK_READ: Double =  props.getProperty("disk.read").toDouble
