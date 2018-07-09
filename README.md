@@ -37,4 +37,4 @@ Output
 ```
 
 ## Configuration / Calibration
-Constants that are being used by cost models, indlucding disk read, write etc. can be set in the conf/cost.properties file.
+Constants that are being used by cost models, indlucding disk read, write etc. can be set in the `conf/cost.properties` file.
