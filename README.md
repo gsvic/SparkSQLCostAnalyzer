@@ -35,3 +35,6 @@ Output
 |----FilterCost[inPart=40, outPart=1,rows=99999, size=30045982] -- Current Cost: 1.1829126759587834, Total Cost: 1.1829126759587834
 |-----ScanCost[inPart=40, outPart=40,rows=14920100, size=4482935372] -- Current Cost: 22.061689741276602, Total Cost: 22.061689741276602
 ```
+
+## Configuration / Calibration
+Constants that are being used by cost models, indlucding disk read, write etc. can be set in the conf/cost.properties file.
