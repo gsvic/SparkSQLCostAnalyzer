@@ -15,7 +15,7 @@ class SortMergeJoinCost(override val children: List[CostModel], override val pla
     val rowsPerPartition = (leftRows + rightRows) / inPartitions.toDouble
     val cost = rowsPerPartition * metrics.CPU * ROUNDS
 
-    0.0
+    cost
   }
 
 }
