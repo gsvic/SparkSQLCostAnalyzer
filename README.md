@@ -13,9 +13,6 @@ val spark = SparkSession.builder()
 
   spark.conf.set("spark.sql.codegen.wholeStage", false)
 
-  val a = Data.createNMillionRowsTable(spark, 5, 10).createOrReplaceTempView("a")
-  val b = Data.createNMillionRowsTable(spark, 2, 10).createOrReplaceTempView("b")
-
   spark.read.parquet("hdfs://localhost:9000/user/gsvictor/data100M36P.parquet").createOrReplaceTempView("a")
   spark.read.parquet("hdfs://localhost:9000/user/gsvictor/data500M20P.parquet").createOrReplaceTempView("b")
 
