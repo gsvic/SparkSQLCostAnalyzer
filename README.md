@@ -26,7 +26,7 @@ val spark = SparkSession.builder()
 ```
 Output
 ```
-|SortMergeJoinCost[inPart=200, outPart=200,rows=100000, size=17905215] -- Current Cost: 0.0, Total Cost: 153.12014660037454
+|SortMergeJoinCost[inPart=200, outPart=200,rows=100000, size=17905215] -- Current Cost: 0.004155409022850999, Total Cost: 153.12430200939738
 |-SortCost[inPart=200, outPart=200,rows=100000, size=17905215] -- Current Cost: 0.012912183843752454, Total Cost: 40.42083234720785
 |--ShuffleCost[inPart=1, outPart=200,rows=100000, size=17905215] -- Current Cost: 39.70299043967368, Total Cost: 40.407920163364096
 |---CostModelImpl[inPart=1, outPart=1,rows=100000, size=17905215] -- Current Cost: 0.0, Total Cost: 0.7049297236904205
